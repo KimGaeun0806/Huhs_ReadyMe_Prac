@@ -1,0 +1,237 @@
+body {
+    background-size: cover;
+}
+
+.crownWomanImg {
+    height: 100%;
+    width: auto;
+    text-align: right;
+    float: right;
+}
+
+.manImg {
+    width: 47px;
+    height: 47px;
+    margin-top: 4px;
+    margin-left: 4px;
+    float: left;
+    position: absolute;
+    filter: drop-shadow(0px 5px 2px #cccccc);
+}
+
+.circle {
+    border: 1px solid #cccccc;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    margin-top: 55px;
+    margin-left: 59px;
+    position: relative;
+    margin-right: 0px;
+    display: inline-block;
+}
+
+.profile {
+    position: absolute;
+    display: inline-block;
+}
+
+.name {
+    font-size: 20px;
+    padding-top: 59px;
+    margin-left: 25px;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+}
+
+.admin {
+    font-size: 10px;
+    margin-top: 4px;
+    margin-left: 28px;
+    font-weight: 700;
+    color: #adadaf;
+    font-family: 'Lato', sans-serif;
+}
+
+.playBtn {
+    width: 44px;
+    display: inline-block;
+    margin-left: 573px;
+    margin-top: 60px;
+}
+
+.playBtn2 {
+    width: 44px;
+    display: inline-block;
+    margin-left: 80px;
+    margin-top: 60px;
+}
+
+.main {
+    margin-left: 215px;
+    margin-top: 72px;
+}
+
+.netflixImg {
+    width: 82px;
+    height: 27px;
+}
+
+.theCrown {
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    font-size: 80px;
+    font-weight: 700;
+    margin-top: 17px;
+}
+
+.star {
+    margin-top: 19px;
+    display: inline-block;
+}
+
+.date {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 10px;
+    vertical-align: 20%;
+}
+
+.season {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    vertical-align: 20%;
+    margin-left: 19px;
+}
+
+.ultra {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    vertical-align: 20%;
+    margin-left: 30px;
+    color: #F1BD04;
+}
+
+.explain {
+    color: #9E9E9E;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-top: 42px;
+    line-height: 25px;
+}
+
+.buttonDiv1 {
+    margin-top: 45px;
+}
+
+.buttonDiv2 {
+    margin-top: 28px;
+}
+
+.button1 {
+    background-color: #f9f9f9;
+    width: 245px;
+    height: 69px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.button1:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btn1Circle {
+    margin-top: -5px;
+    margin-left: -60px;
+    position: absolute;
+}
+
+.btn1Triangle {
+    margin-top: 5px;
+    margin-left: -48px;
+    position: absolute;
+}
+
+.button2 {
+    background-color: #f9f9f9;
+    width: 245px;
+    height: 69px;
+    margin-left: 28px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.button2:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btn2 {
+    margin-top: 0px;
+    margin-left: -60px;
+    position: absolute;
+
+}
+
+.button3 {
+    background-color: #f9f9f9;
+    width: 245px;
+    height: 69px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.button3:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btn3 {
+    margin-top: -12px;
+    margin-left: -40px;
+    position: absolute;
+}
+
+.button4 {
+    background-color: #f9f9f9;
+    width: 245px;
+    height: 69px;
+    margin-left: 28px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.button4:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btn4 {
+    margin-top: 0px;
+    margin-left: -40px;
+    position: absolute;
+}
