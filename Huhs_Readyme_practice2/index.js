@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const button = document.querySelector('#btn_submit');
 button.addEventListener("click", submit);
 
@@ -7,55 +9,35 @@ function submit (){
         password: input_pw.value
     };
 
-    fetch("http://3.37.140.20:5000/api/v1/account/login", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify(user)
-    })
-    .then(res => res.json())
-    .then(data => {
+    const data = {
+        "username": "admin",
+        "password": "admin"
+    }
+
+    axios.post("http://3.37.140.20:5000/api/v1/account/login", data) 
+    .then(res => {
         console.log(data);
 
-        const profileImg = document.createElement('img');
-        profileImg.src = data.profile_url;
-        document.querySelector('#img').innerHTML='';
-        const userImg = document.querySelector('#img');
-        userImg.append(profileImg);
+        const profileImg = document.querySelector('#img');
+        profileImg.src = res.data.profile_url;
 
-        const profileId = document.createElement('p');
-        profileId.textContent = data.user_id;
-        document.querySelector('#p_user_id').innerHTML='';
-        const userId = document.querySelector('#p_user_id');
-        userId.append(profileId); 
+        const profileId = document.querySelector('#p_user_id');
+        profileId.textContent = res.data.user_id;
 
-        const profileName = document.createElement('p');
-        profileName.textContent = data.username;
-        document.querySelector('#p_username').innerHTML='';
-        const userName = document.querySelector('#p_username');
-        userName.append(profileName);
+        const profileName = document.querySelector('#p_username');
+        profileName.textContent = res.data.username;
 
-        const profileBio = document.createElement('p');
-        profileBio.textContent = data.bio;
-        document.querySelector('#p_bio').innerHTML='';
-        const userBio = document.querySelector('#p_bio');
-        userBio.append(profileBio);
+        const profileBio = document.querySelector('#p_bio');
+        profileBio.textContent = res.data.bio;
 
-        const profileAccess = document.createElement('p');
-        profileBio.textContent = data.access_token;
-        document.querySelector('#p_access_token').innerHTML='';
-        const userAccess = document.querySelector('#p_access_token');
-        userAccess.append(profileAccess);
+        const profileAccess = document.querySelector('#p_access_token');
+        profileBio.textContent = res.data.access_token;
 
         button.addEventListener("click", newPage);
 
         function newPage(){
             window.location.href="netflix.html";
         }
-
-
-
     }).catch(error => {console.log(error)})
 }
 

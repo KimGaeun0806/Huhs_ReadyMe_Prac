@@ -1,3 +1,5 @@
+import axios from "axios";
+
 document.getElementById("left").addEventListener("click", left_click);
 document.getElementById("right").addEventListener("click", right_click);
 let i = 0;
@@ -31,18 +33,17 @@ let api = [
 
 
 function apiCall(i) {
-    fetch(api[i])
-    .then(res => res.json())
-    .then(data => {
+    axios.get(api[i])
+    .then(res => {
         const txtTitle = document.createElement('p');
-        txtTitle.textContent = data.data.title;
+        txtTitle.textContent = res.data.data.title;
         document.querySelector('.theCrown').innerHTML='';
         const theCrown = document.querySelector('.theCrown');
         //const theCrown = document.getElementsByClassName('theCrown')[0]; //뒤에 대괄호로 인덱스 지정해줘야 함 ..!
         theCrown.append(txtTitle);
 
         const imgWoman = document.createElement('img');
-        imgWoman.src = data.data.image;
+        imgWoman.src =  res.data.data.image;
         document.querySelector('.crownWomanImg').innerHTML = '';
         const crownWomanImg = document.querySelector('.crownWomanImg');
         crownWomanImg.append(imgWoman);
@@ -101,31 +102,31 @@ function apiCall(i) {
         
 
         const txtYear = document.createElement('p');
-        txtYear.textContent = data.data.year;
+        txtYear.textContent =  res.data.data.year;
         document.querySelector('.date').innerHTML='';
         const date = document.querySelector('.date');
         date.append(txtYear);
 
         const txtSeason = document.createElement('p');
         document.querySelector('.season').innerHTML = '';
-        txtSeason.textContent = data.data.season + " Season";
+        txtSeason.textContent =  res.data.data.season + " Season";
         const season = document.querySelector('.season');
         season.append(txtSeason);
 
         const txtQual = document.createElement('p');
-        txtQual.textContent = data.data.quality;
+        txtQual.textContent =  res.data.data.quality;
         document.querySelector('.ultra').innerHTML = '';
         const ultra = document.querySelector('.ultra');
         ultra.append(txtQual);
 
         const txtDes = document.createElement('p');
-        txtDes.textContent = data.data.description;
+        txtDes.textContent =  res.data.data.description;
         document.querySelector('.explain').innerHTML = '';
         const explain = document.querySelector('.explain');
         explain.append(txtDes);
 
         const txtCurrent = document.createElement('p');
-        txtCurrent.textContent = "Play " + data.data.current_see;
+        txtCurrent.textContent = "Play " +  res.data.data.current_see;
         document.querySelector('.buttons4').innerHTML = '';
         const buttons4 = document.querySelector('.buttons4');
         buttons4.append(txtCurrent); 
